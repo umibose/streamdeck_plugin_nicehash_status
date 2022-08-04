@@ -1,0 +1,1 @@
+# streamdeck_plugin_nicehash_status
