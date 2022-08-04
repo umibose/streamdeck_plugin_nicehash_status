@@ -1,0 +1,40 @@
+{
+    "Actions": [
+        {
+            "Icon": "resources/actionIcon",
+            "Name": "NiceHash mining status",
+            "States": [
+                {
+                    "Image": "resources/actionDefaultImage",
+                    "TitleAlignment": "bottom",
+                    "FontSize": "10"
+                }
+            ],
+            "SupportedInMultiActions": true,
+            "Tooltip": "Get nichhash status.",
+            "UUID": "com.ace-software.nicehash.action"
+        }
+    ],
+    "SDKVersion": 2,
+    "Author": "M.Hayakawa",
+    "CodePath": "main.html",
+    "Description": "Get nichhash status.",
+    "Name": "NiceHash mining status",
+    "Icon": "resources/pluginIcon",
+    "URL": "https://www.ace-software.com",
+    "PropertyInspectorPath": "propertyinspector.html",
+    "Version": "1.0",
+    "OS": [
+        {
+            "Platform": "mac",
+            "MinimumVersion": "10.11"
+        },
+        {
+            "Platform": "windows",
+            "MinimumVersion": "10"
+        }
+    ],
+    "Software": {
+        "MinimumVersion" : "4.1"
+    }
+}

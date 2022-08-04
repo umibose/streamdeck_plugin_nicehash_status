@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>NiceHash setting</title>
+        <link rel="stylesheet" href="sdpi.css">
+        <script src="common.js"></script>
+    </head>
+    <body>
+        <div class="sdpi-wrapper">
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">NiceHash Host</div>
+                <input class="inspector sdpi-item-value" id="nicehashhost" value="">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Api Key</div>
+                <input class="inspector sdpi-item-value" id="apikey" value="">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Api Secret</div>
+                <input class="inspector sdpi-item-value" id="apisecret" value="">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Org Id</div>
+                <input class="inspector sdpi-item-value" id="orgid" value="">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Rig Id</div>
+                <input class="inspector sdpi-item-value" id="rigid" value="">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Max Device Count</div>
+                <input class="inspector sdpi-item-value" id="maxdevicecnt" value="">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Interval Second</div>
+                <input class="inspector sdpi-item-value" id="intervalsec" value="">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Are you done?</div>
+                <button class="sdpi-item-value" id="save" onclick="save()">Save</button>
+            </div>
+        </div>
+        <script>
+            if($SD) {
+                $SD.on("connected", function (jsonObj) {
+                    console.log(`[connected] ${JSON.stringify(jsonObj)}`);
+                    if(jsonObj.hasOwnProperty('actionInfo')) {
+                        settings = Utils.getProp(jsonObj, 'actionInfo.payload.settings', {});
+                        document.getElementById("nicehashhost").value = settings.nicehashhost || "https://api2.nicehash.com";
+                        document.getElementById("apikey").value = settings.apikey || "";
+                        document.getElementById("apisecret").value = settings.apisecret || "";
+                        document.getElementById("orgid").value = settings.orgid || "";
+                        document.getElementById("rigid").value = settings.rigid || "";
+                        document.getElementById("maxdevicecnt").value = settings.maxdevicecnt || 8;
+                        document.getElementById("intervalsec").value = settings.intervalsec || 300;
+                    }
+                });
+            };
+            const save = function() {
+                if($SD) {
+                    var payload = {};
+                    [].forEach.call(document.querySelectorAll(".inspector"), element => {
+                        payload[element.id] = element.value;
+                    });
+                    $SD.api.sendToPlugin($SD.uuid, $SD.actionInfo["action"], payload);
+                }
+            }
+        </script>
+    </body>
+</html>

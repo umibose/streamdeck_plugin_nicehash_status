@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+.DS_Store
+
+com.ace-software.nicehash.sdPlugin/bundle.js
+
+com.ace-software.nicehash.sdPlugin/com.ace-software.nicehash.streamDeckPlugin

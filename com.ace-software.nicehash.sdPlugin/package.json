@@ -1,0 +1,28 @@
+{
+  "name": "example-app-node",
+  "version": "0.0.1",
+  "description": "NiceHash Example App",
+  "main": "index.js",
+  "scripts": {
+    "browserify": "browserify main.js -t babelify -o bundle.js",
+    "package": "rm -f ./com.ace-software.nicehash.streamDeckPlugin & DistributionTool -b -i ../com.ace-software.nicehash.sdPlugin -o .",
+    "build": "npm run browserify"
+  },
+  "author": "NiceHash",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "esm": "^3.2.25",
+    "qs": "^6.7.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-preset-env": "^2.0.0-alpha.20",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0"
+  }
+}
