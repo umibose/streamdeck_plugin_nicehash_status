@@ -4,6 +4,10 @@ This plugin is made using Node.
 
 ![actiongif](/img/action.gif)
 
+## Requirements
+- node
+- [DistributionTool](https://developer.elgato.com/documentation/stream-deck/sdk/packaging/)
+
 ## Install node modules
 ```
 cd com.ace-software.nicehash.sdPlugin
@@ -33,3 +37,14 @@ Double click com.ace-software.nicehash.sdPlugin/com.ace-software.nicehash.stream
 | Rig Id | Optional |
 | Max Device Count | Devices that work with rigs. |
 | Interval Second | Monitoring interval (seconds) |
+
+---
+
+## NiceHash Status Error
+Open http://localhost:23654/ to click com.ace-software.nicehash.
+Check MiningSuccess & MiningStatus.
+
+![error](/img/status_error.png)
+
+> https://developer.elgato.com/documentation/stream-deck/sdk/create-your-own-plugin/
+> See **Debugging your JavaScript plugin**
