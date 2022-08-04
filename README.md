@@ -7,7 +7,7 @@ This plugin is made using Node.
 cd com.ace-software.nicehash.sdPlugin
 npm install
 ```
-## Build
+## Build bundle.js & stream deck plugin
 ### Build bundle.js
 ```
 npm run build
@@ -17,5 +17,5 @@ npm run build
 npm run package
 ```
 
-# install plugin
+## Install plugin
 Double click com.ace-software.nicehash.sdPlugin/com.ace-software.nicehash.streamDeckPlugin.
