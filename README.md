@@ -10,7 +10,8 @@ This plugin is made using Node.
 
 ## Install node modules
 ```
-cd com.ace-software.nicehash.sdPlugin
+git clone https://github.com/umibose/streamdeck_plugin_nicehash_status.git
+cd streamdeck_plugin_nicehash_statuscom.ace-software.nicehash.sdPlugin
 npm install
 ```
 ## Build bundle.js & stream deck plugin
