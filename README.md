@@ -41,10 +41,12 @@ Double click com.ace-software.nicehash.sdPlugin/com.ace-software.nicehash.stream
 ---
 
 ## NiceHash Status Error
+If you get an error with NiceHash, it will be a red mark.
+
+![error](/img/error.png)
+
 Open http://localhost:23654/ to click com.ace-software.nicehash.
 Check MiningSuccess & MiningStatus.
-
-![error](/img/status_error.png)
 
 > https://developer.elgato.com/documentation/stream-deck/sdk/create-your-own-plugin/
 > See **Debugging your JavaScript plugin**
